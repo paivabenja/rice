@@ -3,6 +3,7 @@ export PATH="/home/benjaminpaiva/.local/bin:$PATH"
 export PATH="/usr/lib/python3.10:$PATH"
 
 ZSH_THEME="robbyrussell"
+export EDITOR="lvim"
 
 zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 

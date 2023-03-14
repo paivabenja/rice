@@ -46,6 +46,10 @@ shift + XF86MonBrightnessUp
 super + Return
 	alacritty
 
+# File explorer
+super + e
+  alacritty --class ranger -e ranger &
+
 # program launcher
 super + @space
 	rofi -show drun
@@ -162,4 +166,13 @@ super + {Left,Down,Up,Right}
 
 # Custom app shortcuts
 super + F1
-  nautilus
+  thunar
+
+super + F2
+  chromium
+  
+super + F3
+  spotify
+
+super + F12
+  pavucontrol
