@@ -19,10 +19,10 @@ shift + @Print
 
 #volume
 XF86AudioRaiseVolume
-	amixer set Master 5%+
+	amixer -c 1 set Master 5%+
 
 XF86AudioLowerVolume
-	amixer set Master 5%-
+	amixer -c 1 set Master 5%-
 
 XF86AudioMute
   amixer set Master toggle
