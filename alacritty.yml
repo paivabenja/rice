@@ -1,9 +1,10 @@
 window:
-  decorations: none
+  decorations: full
+  gtk_theme_variant: Dark
   padding:
-    x: 0
-    y: 0
-  opacity: 1
+    x: 20
+    y: 20
+  # opacity: 0.95
 
 font:
   offset:
@@ -21,7 +22,7 @@ font:
   bold:
     family: jetbrainsmono nerd font
     style: bold
-  size: 13
+  size: 12
 
 color_schemes:
   catppuccin-frappe: &catppuccin-frappe
@@ -236,7 +237,10 @@ color_schemes:
 
   gruvbox-dark: &gruvbox-dark
     primary:
-      background: '0x282828'
+      background: '0x282828' # original gruvbox color
+      background: '0x1d2021' # gruvbox hard color
+      # background: '0x2c2c2c' # graphite titlebar background
+      # background: '0x373737' # whitesur titlebar background
       foreground: '0xdfbf8e'
   
     normal:
