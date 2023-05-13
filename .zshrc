@@ -1,6 +1,9 @@
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="/home/paiva/.local/bin:$PATH"
-export PATH="/usr/lib/python3.10:$PATH" export EDITOR=lvim export TERM=alacritty ZSH_THEME="robbyrussell"
+export PATH="/usr/lib/python3.10:$PATH" 
+export EDITOR=nvim
+ZSH_TMUX_CONFIG="$HOME/.config/tmux/tmux.conf"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 zstyle ':omz:update' mode reminder
 DISABLE_AUTO_TITLE="true"
@@ -13,24 +16,27 @@ plugins=(
   zsh-syntax-highlighting 
   zsh-autosuggestions 
   sudo
-  tmux
   vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
 
 alias q='exit'
-alias v='lvim'
-alias l='exa -a'
+alias v='nvim'
+alias l='exa -a --icons'
+alias ll='exa -la --icons'
+
 alias dev='npm run dev'
-alias start='npm start'
 alias venv='source venv/bin/activate'
-alias sn='shutdown now'
-alias manage='python3 manage.py'
+alias py='python3'
+
+alias ts='tmux new-session -s'
+alias ta='tmux attach -t'
 
 bindkey -M viins '^l' clear-screen
-# facha
-pfetch
 
-# starship
-eval "$(starship init zsh)"
+# # facha
+# pfetch
+
+# # starship
+# eval "$(starship init zsh)"
